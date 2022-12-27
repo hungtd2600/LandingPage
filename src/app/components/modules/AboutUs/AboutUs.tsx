@@ -1,6 +1,6 @@
-import React, { FC, ReactElement } from "react";
-import images from "../../../../public/images";
-import "./AboutUs.scss";
+import { FC, ReactElement } from "react";
+import images from "public/images";
+import "app/components/modules/AboutUs/AboutUs.scss";
 
 const AboutUs: FC = (): ReactElement => {
   return (
