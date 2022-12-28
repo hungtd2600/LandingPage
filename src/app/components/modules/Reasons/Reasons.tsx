@@ -1,8 +1,8 @@
-import React, { FC, ReactElement } from "react";
-import images from "../../../../public/images";
-import { ReasonType } from "../../../types/Type";
-import Reason from "../../modules/Reason/Reason";
-import "./Reasons.scss";
+import { FC, ReactElement } from "react";
+import { ReasonType } from "app/types/Type";
+import images from "public/images";
+import ReasonBox from "app/components/elements/ReasonBox/ReasonBox";
+import "app/components/modules/Reasons/Reasons.scss";
 
 const listReason: ReasonType[] = [
   {
@@ -33,7 +33,7 @@ const Reasons: FC = (): ReactElement => {
         <div className="reasons-content">
           {listReason.map((item) => {
             return (
-              <Reason
+              <ReasonBox
                 key={item.id}
                 id={item.id}
                 imageUrl={item.imageUrl}

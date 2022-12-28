@@ -4,3 +4,10 @@ export type ReasonType = {
   title: string;
   desc: string;
 };
+
+export type ServiceType = {
+  id: number;
+  imageUrl: string;
+  service: string;
+  theme: string;
+};

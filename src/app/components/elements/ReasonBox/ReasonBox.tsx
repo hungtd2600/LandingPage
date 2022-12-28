@@ -1,8 +1,8 @@
-import React, { FC, ReactElement } from "react";
-import "./Reason.scss";
-import { ReasonType } from "../../../types/Type";
+import { FC, ReactElement } from "react";
+import { ReasonType } from "app/types/Type";
+import "app/components/elements/ReasonBox/ReasonBox.scss";
 
-const Reason: FC<ReasonType> = (reason): ReactElement => {
+const ReasonBox: FC<ReasonType> = (reason): ReactElement => {
   return (
     <div key={reason.id} className="reason">
       <div className="reason-icon">
@@ -14,4 +14,4 @@ const Reason: FC<ReasonType> = (reason): ReactElement => {
   );
 };
 
-export default Reason;
+export default ReasonBox;
