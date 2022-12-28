@@ -1,9 +1,15 @@
 import { FC, ReactElement } from "react";
-import FormElement from "app/components/elements/FormElement";
-import ButtonSecondary from "app/components/elements/ButtonSecondary";
+import Input from "../elements/Input";
 import SocialGroup from "app/components/elements/SocialGroup";
 import Logo from "../elements/Logo";
+import Button from "../elements/Button";
 import "app/styles/component/modules/Bottom.scss";
+
+const styleButton = {
+  color: "white",
+  background: "#F9995D",
+  padding: "10px 24px",
+};
 
 const Bottom: FC = (): ReactElement => {
   return (
@@ -34,8 +40,8 @@ const Bottom: FC = (): ReactElement => {
           <div className="bottom-news">
             <h5 className="news-title">Newsletter:</h5>
             <div className="new-content">
-              <FormElement />
-              <ButtonSecondary />
+              <Input placeholder="Your email here" />
+              <Button title="Subscribe" style={styleButton} />
             </div>
           </div>
           <div className="bottom-social">

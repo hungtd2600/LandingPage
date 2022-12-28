@@ -1,3 +1,5 @@
+@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+
 .services {
   .container {
     background-color: #f6f8f7;
@@ -6,7 +8,7 @@
       font-size: 36px;
       line-height: calc(42 / 36);
       text-align: center;
-      color: #292e3d;
+      color: $neutral-color;
       padding-top: 44px;
     }
     .services-content {

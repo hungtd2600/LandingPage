@@ -1,7 +1,6 @@
-import { ReasonBoxProps } from "app/components/elements/ReasonBox";
 import images from "public/images";
 
-export const listReason: ReasonBoxProps[] = [
+export const listReason = [
   {
     id: 1,
     imageUrl: images.reasonIcon1,
