@@ -1,10 +1,11 @@
-import AboutUs from "app/components/modules/AboutUs/AboutUs";
-import Footer from "app/components/modules/Footer/Footer";
-import Hero from "app/components/modules/Hero/Hero";
-import Navbar from "app/components/modules/Navbar/Navbar";
-import Reasons from "app/components/modules/Reasons/Reasons";
-import Services from "app/components/modules/Services/Services";
 import { FC, ReactElement } from "react";
+import AboutUs from "app/components/modules/AboutUs";
+import Bottom from "app/components/modules/Bottom";
+import Footer from "app/components/modules/Footer";
+import Hero from "app/components/modules/Hero";
+import Navbar from "app/components/modules/Navbar";
+import Reasons from "app/components/modules/Reasons";
+import Services from "app/components/modules/Services";
 
 const LandingPage: FC = (): ReactElement => {
   return (
@@ -14,6 +15,7 @@ const LandingPage: FC = (): ReactElement => {
       <Reasons />
       <AboutUs />
       <Services />
+      <Bottom />
       <Footer />
     </>
   );

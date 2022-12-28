@@ -1,0 +1,12 @@
+@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+
+.form {
+  padding: 10px 8px;
+  gap: 10px;
+  background: $white-color;
+  border: 1px solid #e0e3eb;
+  border-radius: 4px;
+  width: 280px;
+  height: 41px;
+  color: #a3aac2;
+}
