@@ -10,6 +10,9 @@ const images = {
   serviceIcon4: require("public/images/service-icon-4.png"),
   serviceIcon5: require("public/images/service-icon-5.png"),
   serviceIcon6: require("public/images/service-icon-6.png"),
+  facebook: require("public/images/facebook.png"),
+  linked: require("public/images/linked.png"),
+  twitter: require("public/images/twitter.png"),
 };
 
 export default images;
