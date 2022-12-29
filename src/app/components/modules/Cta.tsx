@@ -35,7 +35,7 @@ const Cta: FC = (): ReactElement => {
           </p>
         </div>
         <div className="cta-final">
-          <Button title="Submit" style={styleButton} />
+          <Button style={styleButton}>Submit</Button>
         </div>
       </div>
     </section>

@@ -10,18 +10,18 @@ const styleButton = {
   padding: "16px 39px",
 };
 
-type StatsBoxType = {
+type StatsType = {
   id: number;
   boxNumber: number;
   desc: string;
 };
 
-type StatsBoxProps = {
-  listStats: StatsBoxType[];
+type StatsProps = {
+  statList: StatsType[];
 };
 
-const Stats: FC<StatsBoxProps> = ({ listStats }): ReactElement => {
-  const StatsBox: FC<StatsBoxType> = (props: StatsBoxType): ReactElement => {
+const Stats: FC<StatsProps> = ({ statList }): ReactElement => {
+  const StatsBox: FC<StatsType> = (props: StatsType): ReactElement => {
     return (
       <>
         <h4 className="box-number">{props.boxNumber}</h4>
@@ -44,7 +44,7 @@ const Stats: FC<StatsBoxProps> = ({ listStats }): ReactElement => {
             <img src={images.stastIcon4} alt="" className="icon-item" />
           </div>
           <div className="achievement-box">
-            {listStats.map((item) => {
+            {statList.map((item) => {
               return (
                 <div key={item.id} className="box-item">
                   <StatsBox
@@ -63,7 +63,9 @@ const Stats: FC<StatsBoxProps> = ({ listStats }): ReactElement => {
             Our company has been the leading provided construction services to
             clients throughout the USA since 1988.
           </p>
-          <Button title="Contact Us" style={styleButton} />
+          <Button title="Contact Us" style={styleButton}>
+            Contact Us
+          </Button>
         </div>
       </div>
     </section>

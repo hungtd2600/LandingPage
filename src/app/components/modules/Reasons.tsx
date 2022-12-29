@@ -1,19 +1,19 @@
 import { FC, ReactElement } from "react";
 import "app/styles/component/modules/Reasons.scss";
 
-type ReasonBoxType = {
+type ReasonType = {
   id: number;
   imageUrl: string;
   title: string;
   desc: string;
 };
 
-type ReasonBoxProps = {
-  listReasons: ReasonBoxType[];
+type ReasonProps = {
+  reasonList: ReasonType[];
 };
 
-const Reasons: FC<ReasonBoxProps> = ({ listReasons }): ReactElement => {
-  const ReasonBox: FC<ReasonBoxType> = (props: ReasonBoxType): ReactElement => {
+const Reasons: FC<ReasonProps> = ({ reasonList }): ReactElement => {
+  const ReasonBox: FC<ReasonType> = (props: ReasonType): ReactElement => {
     return (
       <div key={props.id} className="reason">
         <div className="reason-icon">
@@ -29,7 +29,7 @@ const Reasons: FC<ReasonBoxProps> = ({ listReasons }): ReactElement => {
       <div className="container">
         <h1 className="reasons-title">Our Reputation</h1>
         <div className="reasons-content">
-          {listReasons.map((item) => {
+          {reasonList.map((item) => {
             return (
               <ReasonBox
                 key={item.id}

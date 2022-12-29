@@ -1,16 +1,14 @@
 import "app/styles/component/elements/Input.scss";
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  placeholder: string;
-}
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input: React.FC<InputProps> = ({ placeholder, style }) => {
+const Input: React.FC<InputProps> = ({ ...props }) => {
   return (
     <input
-      style={style}
+      style={props.style}
       className="input"
       type="text"
-      placeholder={placeholder}
+      placeholder={props.placeholder}
     />
   );
 };

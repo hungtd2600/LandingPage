@@ -1,5 +1,5 @@
 import images from "public/images";
-export const listSProject = [
+export const projectList = [
   {
     id: 1,
     imageUrl: images.projectImage1,
