@@ -90,6 +90,14 @@
             cursor: pointer;
           }
         }
+        .navigate-button {
+          color: $white-color;
+          background: #292e3d;
+          padding: 21px 108px;
+          width: 295px;
+          font-weight: 400;
+          display: flex;
+        }
       }
     }
   }

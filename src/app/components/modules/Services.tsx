@@ -1,5 +1,5 @@
 import { FC, ReactElement, useEffect, useRef } from "react";
-import "app/styles/component/modules/Services.scss";
+import "app/styles/component/modules/services.scss";
 
 type ServiceType = {
   id: number;
@@ -13,7 +13,7 @@ type ServiceProps = {
 };
 
 const Services: FC<ServiceProps> = ({ serviceList }): ReactElement => {
-  const ServiceCard: FC<ServiceType> = (props: ServiceType): ReactElement => {
+  const ServiceCard = (props: ServiceType): ReactElement => {
     const card = useRef<HTMLInputElement>(null);
     const cardService = useRef<HTMLInputElement>(null);
 
@@ -24,7 +24,8 @@ const Services: FC<ServiceProps> = ({ serviceList }): ReactElement => {
         cardElement?.classList.add("theme-white");
         cardServiceElement?.classList.add("primary-color");
       }
-    });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
       <div className="card" ref={card}>

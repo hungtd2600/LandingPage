@@ -28,5 +28,12 @@
         line-height: calc(28 / 24);
       }
     }
+    .ads-button {
+      color: $white-color;
+      padding: 16px 20px;
+      background: unset;
+      border: 2px solid $white-color;
+      border-radius: 2px;
+    }
   }
 }

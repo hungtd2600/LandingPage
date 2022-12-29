@@ -1,14 +1,7 @@
 import { FC, ReactElement } from "react";
 import images from "public/images";
 import Button from "app/components/elements/Button";
-import "app/styles/component/modules/Stats.scss";
-
-const styleButton = {
-  width: "176px",
-  background: "#2947A9",
-  color: "white",
-  padding: "16px 39px",
-};
+import "app/styles/component/modules/stats.scss";
 
 type StatsType = {
   id: number;
@@ -21,7 +14,7 @@ type StatsProps = {
 };
 
 const Stats: FC<StatsProps> = ({ statList }): ReactElement => {
-  const StatsBox: FC<StatsType> = (props: StatsType): ReactElement => {
+  const StatsBox = (props: StatsType): ReactElement => {
     return (
       <>
         <h4 className="box-number">{props.boxNumber}</h4>
@@ -63,9 +56,7 @@ const Stats: FC<StatsProps> = ({ statList }): ReactElement => {
             Our company has been the leading provided construction services to
             clients throughout the USA since 1988.
           </p>
-          <Button title="Contact Us" style={styleButton}>
-            Contact Us
-          </Button>
+          <Button className="button introduce-button">Contact Us</Button>
         </div>
       </div>
     </section>

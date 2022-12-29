@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react";
-import "app/styles/component/modules/Reasons.scss";
+import "app/styles/component/modules/reasons.scss";
 
 type ReasonType = {
   id: number;
@@ -13,7 +13,7 @@ type ReasonProps = {
 };
 
 const Reasons: FC<ReasonProps> = ({ reasonList }): ReactElement => {
-  const ReasonBox: FC<ReasonType> = (props: ReasonType): ReactElement => {
+  const ReasonBox = (props: ReasonType): ReactElement => {
     return (
       <div key={props.id} className="reason">
         <div className="reason-icon">

@@ -1,15 +1,7 @@
 import { FC, ReactElement } from "react";
 import Input from "app/components/elements/Input";
 import Button from "app/components/elements/Button";
-import "app/styles/component/modules/Cta.scss";
-
-const styleButton = {
-  width: "271px",
-  background: "#2947A9",
-  color: "white",
-  padding: "16px auto",
-  height: "53px",
-};
+import "app/styles/component/modules/cta.scss";
 
 const Cta: FC = (): ReactElement => {
   return (
@@ -24,10 +16,10 @@ const Cta: FC = (): ReactElement => {
         </div>
         <div className="cta-content">
           <div className="content-form">
-            <Input placeholder="Your Name*" />
-            <Input placeholder="Email*" />
-            <Input placeholder="Reason for Contacting*" />
-            <Input placeholder="Phone" />
+            <Input type="text" placeholder="Your Name*" />
+            <Input type="text" placeholder="Email*" />
+            <Input type="text" placeholder="Reason for Contacting*" />
+            <Input type="text" placeholder="Phone" />
             <textarea className="content-textarea" placeholder="Messages" />
           </div>
           <p className="content-tutorial">
@@ -35,7 +27,7 @@ const Cta: FC = (): ReactElement => {
           </p>
         </div>
         <div className="cta-final">
-          <Button style={styleButton}>Submit</Button>
+          <Button className="button cta-button ">Submit</Button>
         </div>
       </div>
     </section>

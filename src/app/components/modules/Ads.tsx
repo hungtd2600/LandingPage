@@ -1,14 +1,6 @@
 import { FC, ReactElement } from "react";
 import Button from "app/components/elements/Button";
-import "app/styles/component/modules/Ads.scss";
-
-const styleButton = {
-  color: "white",
-  background: "unset",
-  padding: "16px 20px",
-  border: "2px solid #FFFFFF",
-  borderRadius: "2px",
-};
+import "app/styles/component/modules/ads.scss";
 
 const Ads: FC = (): ReactElement => {
   return (
@@ -20,7 +12,7 @@ const Ads: FC = (): ReactElement => {
           </h3>
           <p className="content-desc">Just one call away: +84 1102 2703</p>
         </div>
-        <Button style={styleButton}>Get your consultation</Button>
+        <Button className="button ads-button">Get your consultation</Button>
       </div>
     </section>
   );

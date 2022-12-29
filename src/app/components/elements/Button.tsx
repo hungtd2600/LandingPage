@@ -5,9 +5,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onNavigate?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ style, children, onNavigate }) => {
+const Button: React.FC<ButtonProps> = ({ children, onNavigate, ...props }) => {
   return (
-    <button onClick={onNavigate} className="button" style={style}>
+    <button onClick={onNavigate} {...props}>
       {children}
     </button>
   );

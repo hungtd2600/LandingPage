@@ -1,16 +1,7 @@
 import { FC, ReactElement } from "react";
 import Button from "app/components/elements/Button";
-import "app/styles/component/modules/Project.scss";
+import "app/styles/component/modules/project.scss";
 import images from "public/images";
-
-const styleButton = {
-  color: "white",
-  background: "#292E3D",
-  padding: "21px 108px",
-  width: "295px",
-  fontWeight: "400",
-  display: "flex",
-};
 
 type ProjectType = {
   id: number;
@@ -24,7 +15,7 @@ type ProjectProps = {
 };
 
 const Project: FC<ProjectProps> = ({ projectList }): ReactElement => {
-  const ProjectBox: FC<ProjectType> = (props: ProjectType): ReactElement => {
+  const ProjectBox = (props: ProjectType): ReactElement => {
     return (
       <div key={props.id} className="project-item">
         <img src={props.imageUrl} alt="" className="item-image" />
@@ -78,18 +69,18 @@ const Project: FC<ProjectProps> = ({ projectList }): ReactElement => {
               );
             })}
             <div className="project-navigate">
-              <Button style={styleButton}>
+              <Button className="button navigate-button">
                 <img src={images.arrowBack} alt="" />
                 Back
               </Button>
               <div className="navigate-control">
-                <div className="control-item active-fill "></div>
-                <div className="control-item"></div>
-                <div className="control-item"></div>
-                <div className="control-item"></div>
-                <div className="control-item"></div>
+                <div className="control-item active-fill " />
+                <div className="control-item" />
+                <div className="control-item" />
+                <div className="control-item" />
+                <div className="control-item" />
               </div>
-              <Button style={styleButton}>
+              <Button className="button navigate-button">
                 Next <img src={images.arrowNext} alt="" />
               </Button>
             </div>

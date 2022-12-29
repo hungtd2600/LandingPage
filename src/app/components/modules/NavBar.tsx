@@ -1,6 +1,6 @@
 import { FC, ReactElement, useEffect, useRef } from "react";
 import Logo from "app/components/elements/Logo";
-import "app/styles/component/modules/NavBar.scss";
+import "app/styles/component/modules/navbar.scss";
 
 type MenuItemType = {
   id: number;

@@ -3,13 +3,7 @@ import Input from "app/components/elements/Input";
 import Logo from "app/components/elements/Logo";
 import Button from "app/components/elements/Button";
 import images from "public/images";
-import "app/styles/component/modules/Bottom.scss";
-
-const styleButton = {
-  color: "white",
-  background: "#F9995D",
-  padding: "10px 24px",
-};
+import "app/styles/component/modules/bottom.scss";
 
 const Bottom: FC = (): ReactElement => {
   const SocialGroup: FC = (): ReactElement => {
@@ -51,7 +45,7 @@ const Bottom: FC = (): ReactElement => {
             <h5 className="news-title">Newsletter:</h5>
             <div className="new-content">
               <Input placeholder="Your email here" />
-              <Button style={styleButton}>Subscribe</Button>
+              <Button className="button new-button">Subscribe</Button>
             </div>
           </div>
           <div className="bottom-social">

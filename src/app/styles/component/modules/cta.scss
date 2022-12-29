@@ -57,6 +57,13 @@
     .cta-final {
       margin-top: 28px;
       margin-bottom: 61px;
+      .cta-button {
+        width: 271px;
+        background: $primary-color;
+        color: $white-color;
+        padding: 16px auto;
+        height: 53px;
+      }
     }
   }
 }

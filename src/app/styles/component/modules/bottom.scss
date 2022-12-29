@@ -67,6 +67,11 @@
           display: flex;
           align-items: center;
           gap: 8px;
+          .new-button {
+            color: $white-color;
+            background: #f9995d;
+            padding: 10px 24px;
+          }
         }
       }
       .bottom-social {

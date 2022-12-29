@@ -1,4 +1,5 @@
 @import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+
 .aboutus {
   .container {
     position: relative;
@@ -40,6 +41,11 @@
         justify-content: flex-start;
         align-items: center;
         margin-top: 74px;
+        .aboutus-button {
+          width: 200px;
+          height: 53px;
+          color: #2947a9;
+        }
       }
     }
   }
