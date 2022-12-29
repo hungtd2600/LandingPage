@@ -1,21 +1,19 @@
 import { FC, ReactElement, useEffect, useRef } from "react";
 import "app/styles/component/modules/Services.scss";
 
-type ServiceCardType = {
+type ServiceType = {
   id: number;
   imageUrl: string;
   service: string;
   theme: string;
 };
 
-type ServiceCardProps = {
-  listServices: ServiceCardType[];
+type ServiceProps = {
+  serviceList: ServiceType[];
 };
 
-const Services: FC<ServiceCardProps> = ({ listServices }): ReactElement => {
-  const ServiceCard: FC<ServiceCardType> = (
-    props: ServiceCardType
-  ): ReactElement => {
+const Services: FC<ServiceProps> = ({ serviceList }): ReactElement => {
+  const ServiceCard: FC<ServiceType> = (props: ServiceType): ReactElement => {
     const card = useRef<HTMLInputElement>(null);
     const cardService = useRef<HTMLInputElement>(null);
 
@@ -46,7 +44,7 @@ const Services: FC<ServiceCardProps> = ({ listServices }): ReactElement => {
       <div className="container">
         <h2 className="services-title">Services</h2>
         <div className="services-content">
-          {listServices.map((item) => (
+          {serviceList.map((item) => (
             <ServiceCard
               id={item.id}
               key={item.id}

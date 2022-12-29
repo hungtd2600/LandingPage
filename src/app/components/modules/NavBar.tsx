@@ -10,10 +10,10 @@ type MenuItemType = {
 };
 
 type MenuItemProps = {
-  listMenuItem: MenuItemType[];
+  menuList: MenuItemType[];
 };
 
-const Menu: FC<MenuItemProps> = ({ listMenuItem }): ReactElement => {
+const Menu: FC<MenuItemProps> = ({ menuList }): ReactElement => {
   const MenuItem: FC<MenuItemType> = ({
     name,
     isActive,
@@ -39,7 +39,7 @@ const Menu: FC<MenuItemProps> = ({ listMenuItem }): ReactElement => {
   };
   return (
     <ul className="menu">
-      {listMenuItem.map((item) => {
+      {menuList.map((item) => {
         return (
           <MenuItem
             key={item.id}
@@ -54,12 +54,12 @@ const Menu: FC<MenuItemProps> = ({ listMenuItem }): ReactElement => {
   );
 };
 
-const NavBar: FC<MenuItemProps> = ({ listMenuItem }): ReactElement => {
+const NavBar: FC<MenuItemProps> = ({ menuList }): ReactElement => {
   return (
     <section className="navbar">
       <div className="container">
         <Logo />
-        <Menu listMenuItem={listMenuItem} />
+        <Menu menuList={menuList} />
       </div>
     </section>
   );

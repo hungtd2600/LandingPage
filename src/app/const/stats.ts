@@ -1,4 +1,4 @@
-export const listStats = [
+export const statList = [
   {
     id: 1,
     boxNumber: 123,

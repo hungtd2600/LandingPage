@@ -1,9 +1,9 @@
 import { FC, ReactElement } from "react";
-import { listSProject } from "app/const/project";
-import { listReasons } from "app/const/reasons";
-import { listServices } from "app/const/services";
-import { listStats } from "app/const/stats";
-import { listMenuItem } from "app/const/menu";
+import { projectList } from "app/const/project";
+import { reasonList } from "app/const/reasons";
+import { serviceList } from "app/const/services";
+import { statList } from "app/const/stats";
+import { menuList } from "app/const/menu";
 import AboutUs from "app/components/modules/AboutUs";
 import Bottom from "app/components/modules/Bottom";
 import Footer from "app/components/modules/Footer";
@@ -19,14 +19,14 @@ import Cta from "app/components/modules/Cta";
 const LandingPage: FC = (): ReactElement => {
   return (
     <>
-      <NavBar listMenuItem={listMenuItem} />
+      <NavBar menuList={menuList} />
       <Hero />
-      <Reasons listReasons={listReasons} />
+      <Reasons reasonList={reasonList} />
       <AboutUs />
-      <Services listServices={listServices} />
-      <Stats listStats={listStats} />
+      <Services serviceList={serviceList} />
+      <Stats statList={statList} />
       <Ads />
-      <Project listSProject={listSProject} />
+      <Project projectList={projectList} />
       <Cta />
       <Bottom />
       <Footer />

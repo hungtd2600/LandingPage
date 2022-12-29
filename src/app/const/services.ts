@@ -1,6 +1,6 @@
 import images from "public/images";
 
-export const listServices = [
+export const serviceList = [
   {
     id: 1,
     imageUrl: images.serviceIcon1,

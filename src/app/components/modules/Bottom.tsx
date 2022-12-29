@@ -51,7 +51,7 @@ const Bottom: FC = (): ReactElement => {
             <h5 className="news-title">Newsletter:</h5>
             <div className="new-content">
               <Input placeholder="Your email here" />
-              <Button title="Subscribe" style={styleButton} />
+              <Button style={styleButton}>Subscribe</Button>
             </div>
           </div>
           <div className="bottom-social">

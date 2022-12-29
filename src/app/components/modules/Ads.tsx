@@ -20,7 +20,7 @@ const Ads: FC = (): ReactElement => {
           </h3>
           <p className="content-desc">Just one call away: +84 1102 2703</p>
         </div>
-        <Button title="Get your consultation" style={styleButton} />
+        <Button style={styleButton}>Get your consultation</Button>
       </div>
     </section>
   );

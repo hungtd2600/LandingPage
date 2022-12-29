@@ -1,6 +1,7 @@
 import { FC, ReactElement } from "react";
 import Button from "app/components/elements/Button";
 import "app/styles/component/modules/Project.scss";
+import images from "public/images";
 
 const styleButton = {
   color: "white",
@@ -11,21 +12,19 @@ const styleButton = {
   display: "flex",
 };
 
-type ProjectBoxType = {
+type ProjectType = {
   id: number;
   imageUrl: string;
   title: string;
   desc: string;
 };
 
-type ProjectBoxProps = {
-  listSProject: ProjectBoxType[];
+type ProjectProps = {
+  projectList: ProjectType[];
 };
 
-const Project: FC<ProjectBoxProps> = ({ listSProject }): ReactElement => {
-  const ProjectBox: FC<ProjectBoxType> = (
-    props: ProjectBoxType
-  ): ReactElement => {
+const Project: FC<ProjectProps> = ({ projectList }): ReactElement => {
+  const ProjectBox: FC<ProjectType> = (props: ProjectType): ReactElement => {
     return (
       <div key={props.id} className="project-item">
         <img src={props.imageUrl} alt="" className="item-image" />
@@ -67,7 +66,7 @@ const Project: FC<ProjectBoxProps> = ({ listSProject }): ReactElement => {
             </li>
           </ul>
           <div className="project-group">
-            {listSProject.map((item) => {
+            {projectList.map((item) => {
               return (
                 <ProjectBox
                   key={item.id}
@@ -79,7 +78,10 @@ const Project: FC<ProjectBoxProps> = ({ listSProject }): ReactElement => {
               );
             })}
             <div className="project-navigate">
-              <Button title="Back" style={styleButton} />
+              <Button style={styleButton}>
+                <img src={images.arrowBack} alt="" />
+                Back
+              </Button>
               <div className="navigate-control">
                 <div className="control-item active-fill "></div>
                 <div className="control-item"></div>
@@ -87,7 +89,9 @@ const Project: FC<ProjectBoxProps> = ({ listSProject }): ReactElement => {
                 <div className="control-item"></div>
                 <div className="control-item"></div>
               </div>
-              <Button title="Next" style={styleButton} />
+              <Button style={styleButton}>
+                Next <img src={images.arrowNext} alt="" />
+              </Button>
             </div>
           </div>
         </div>

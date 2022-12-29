@@ -27,7 +27,7 @@ const AboutUs: FC = (): ReactElement => {
             U.S.
           </p>
           <div className="infor-more">
-            <Button title="More on Our History" style={sytleButton} />
+            <Button style={sytleButton}>More on Our History</Button>
           </div>
         </div>
       </div>
