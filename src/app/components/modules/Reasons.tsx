@@ -1,4 +1,5 @@
 import { FC, ReactElement } from "react";
+import images from "public/images";
 import "app/styles/component/modules/reasons.scss";
 
 type ReasonType = {
@@ -25,24 +26,29 @@ const Reasons: FC<ReasonProps> = ({ reasonList }): ReactElement => {
     );
   };
   return (
-    <section className="reasons">
-      <div className="container">
-        <h1 className="reasons-title">Our Reputation</h1>
-        <div className="reasons-content">
-          {reasonList.map((item) => {
-            return (
-              <ReasonBox
-                key={item.id}
-                id={item.id}
-                imageUrl={item.imageUrl}
-                title={item.title}
-                desc={item.desc}
-              />
-            );
-          })}
+    <>
+      <section className="hero">
+        <img src={images.hero} alt="" />
+      </section>
+      <section className="reasons">
+        <div className="container">
+          <h1 className="reasons-title">Our Reputation</h1>
+          <div className="reasons-content">
+            {reasonList.map((item) => {
+              return (
+                <ReasonBox
+                  key={item.id}
+                  id={item.id}
+                  imageUrl={item.imageUrl}
+                  title={item.title}
+                  desc={item.desc}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
