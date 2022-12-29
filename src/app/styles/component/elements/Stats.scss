@@ -1,0 +1,101 @@
+@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+
+.stats {
+  height: 723px;
+  position: relative;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .stats-achievement {
+      width: 641px;
+      height: 563px;
+      .achievement-icon {
+        .icon-item:nth-child(1) {
+          position: absolute;
+          top: 172px;
+          left: 179px;
+          z-index: 4;
+        }
+        .icon-item:nth-child(2) {
+          position: absolute;
+          top: 103px;
+          left: 723px;
+          z-index: 4;
+        }
+        .icon-item:nth-child(3) {
+          position: absolute;
+          top: 349px;
+          left: 662px;
+          z-index: 4;
+        }
+        .icon-item:nth-child(4) {
+          position: absolute;
+          top: 582px;
+          left: 549px;
+          z-index: 4;
+        }
+      }
+      .achievement-box {
+        .box-item:nth-child(1) {
+          position: absolute;
+          top: 221px;
+          left: 212px;
+          z-index: 2;
+        }
+        .box-item:nth-child(2) {
+          position: absolute;
+          top: 122px;
+          left: 512px;
+          z-index: 3;
+        }
+        .box-item:nth-child(3) {
+          position: absolute;
+          top: 364px;
+          left: 458px;
+          z-index: 3;
+        }
+        .box-item:nth-child(4) {
+          position: absolute;
+          top: 469px;
+          left: 261px;
+          z-index: 2;
+        }
+      }
+      .achievement-box {
+        .box-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 30px;
+          gap: 2px;
+          border: 1px solid #ffffff;
+          box-shadow: 0px 12px 16px -4px rgba(17, 24, 39, 0.1),
+            0px 4px 6px -2px rgba(17, 24, 39, 0.05);
+          border-radius: 4px;
+          width: fit-content;
+        }
+      }
+    }
+    .stats-introduce {
+      width: 360px;
+      height: 374px;
+      margin-top: 172px;
+      margin-right: 25px;
+      .introduce-title {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: calc(70 / 60);
+        color: $primary-color;
+        margin-bottom: 40px;
+      }
+      .introduce-content {
+        font-size: 20px;
+        line-height: calc(23 / 20);
+        color: #525b7a;
+        width: 330px;
+        margin-bottom: 49px;
+      }
+    }
+  }
+}

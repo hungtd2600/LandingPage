@@ -1,7 +1,6 @@
-import { ServiceCardProps } from "app/components/elements/ServiceCard";
 import images from "public/images";
 
-export const listService: ServiceCardProps[] = [
+export const listService = [
   {
     id: 1,
     imageUrl: images.serviceIcon1,

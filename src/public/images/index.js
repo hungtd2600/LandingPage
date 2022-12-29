@@ -1,5 +1,6 @@
 const images = {
   logo: require("public/images/logo.png"),
+  ads: require("public/images/ads.png"),
   hero: require("public/images/hero.png"),
   reasonIcon1: require("public/images/reason-icon-1.png"),
   reasonIcon2: require("public/images/reason-icon-2.png"),
@@ -13,6 +14,14 @@ const images = {
   facebook: require("public/images/facebook.png"),
   linked: require("public/images/linked.png"),
   twitter: require("public/images/twitter.png"),
+  stastIcon1: require("public/images/stast-icon-1.png"),
+  stastIcon2: require("public/images/stast-icon-2.png"),
+  stastIcon3: require("public/images/stast-icon-3.png"),
+  stastIcon4: require("public/images/stast-icon-4.png"),
+  projectImage1: require("public/images/project-image-1.png"),
+  projectImage2: require("public/images/project-image-2.png"),
+  projectImage3: require("public/images/project-image-3.png"),
+  projectImage4: require("public/images/project-image-4.png"),
 };
 
 export default images;

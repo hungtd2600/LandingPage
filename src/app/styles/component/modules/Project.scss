@@ -1,0 +1,96 @@
+@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+
+.active-link {
+  font-weight: 700 !important;
+  color: $primary-color !important;
+}
+
+.active-fill {
+  background-color: $primary-color !important;
+}
+
+.project {
+  .container {
+    .project-title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      color: $neutral-color;
+      margin: 88px auto 40px 0;
+    }
+    .project-content {
+      display: flex;
+      gap: 254px;
+      margin-bottom: 138px;
+      .menu {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        width: fit-content;
+        height: fit-content;
+        .menu-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0px;
+          gap: 16px;
+          .menu-fill {
+            width: 4px;
+            height: 28px;
+            background-color: $white-color;
+          }
+          .menu-link {
+            color: #c2c7d6;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: calc(28 / 24);
+          }
+        }
+      }
+    }
+    .project-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      flex-wrap: wrap;
+      .project-item {
+        border-radius: 2px;
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow: hidden;
+        .item-title {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 23px;
+          color: $white-color;
+          margin-left: 12px;
+        }
+        .item-desc {
+          font-size: 18px;
+          line-height: calc(21 / 18);
+          color: $white-color;
+          margin-left: 12px;
+          margin-bottom: 16px;
+        }
+      }
+      .project-navigate {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+        .navigate-control {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          .control-item {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
