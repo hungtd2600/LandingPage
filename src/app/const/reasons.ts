@@ -1,6 +1,6 @@
 import images from "public/images";
 
-export const listReason = [
+export const listReasons = [
   {
     id: 1,
     imageUrl: images.reasonIcon1,

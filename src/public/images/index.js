@@ -22,6 +22,8 @@ const images = {
   projectImage2: require("public/images/project-image-2.png"),
   projectImage3: require("public/images/project-image-3.png"),
   projectImage4: require("public/images/project-image-4.png"),
+  arrowBack: require("public/images/arrow-back.png"),
+  arrowNext: require("public/images/arrow-next.png"),
 };
 
 export default images;

@@ -1,9 +1,7 @@
 import { FC, ReactElement } from "react";
-import "app/styles/component/elements/Stats.scss";
 import images from "public/images";
-import Button from "../elements/Button";
-import { listStats } from "app/const/stats";
-import StatsBox from "../elements/StatsBox";
+import Button from "app/components/elements/Button";
+import "app/styles/component/modules/Stats.scss";
 
 const styleButton = {
   width: "176px",
@@ -12,7 +10,29 @@ const styleButton = {
   padding: "16px 39px",
 };
 
-const Stats: FC = (): ReactElement => {
+type StatsBoxType = {
+  id: number;
+  boxNumber: number;
+  desc: string;
+};
+
+type StatsBoxProps = {
+  listStats: StatsBoxType[];
+};
+
+const Stats: FC<StatsBoxProps> = ({ listStats }): ReactElement => {
+  const StatsBox: FC<StatsBoxType> = (props: StatsBoxType): ReactElement => {
+    return (
+      <>
+        <h4 className="box-number">{props.boxNumber}</h4>
+        <div className="box-desc">
+          <span className="desc-fill"></span>
+          <span className="desc-content">{props.desc}</span>
+        </div>
+      </>
+    );
+  };
+
   return (
     <section className="stats">
       <div className="container">

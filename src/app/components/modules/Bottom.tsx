@@ -1,8 +1,8 @@
 import { FC, ReactElement } from "react";
-import Input from "../elements/Input";
-import SocialGroup from "app/components/elements/SocialGroup";
-import Logo from "../elements/Logo";
-import Button from "../elements/Button";
+import Input from "app/components/elements/Input";
+import Logo from "app/components/elements/Logo";
+import Button from "app/components/elements/Button";
+import images from "public/images";
 import "app/styles/component/modules/Bottom.scss";
 
 const styleButton = {
@@ -12,6 +12,16 @@ const styleButton = {
 };
 
 const Bottom: FC = (): ReactElement => {
+  const SocialGroup: FC = (): ReactElement => {
+    return (
+      <div className="social">
+        <img src={images.facebook} alt="" className="social-item" />
+        <img src={images.linked} alt="" className="social-item" />
+        <img src={images.twitter} alt="" className="social-item" />
+      </div>
+    );
+  };
+
   return (
     <section className="bottom">
       <div className="container">

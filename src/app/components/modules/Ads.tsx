@@ -1,6 +1,6 @@
 import { FC, ReactElement } from "react";
+import Button from "app/components/elements/Button";
 import "app/styles/component/modules/Ads.scss";
-import Button from "../elements/Button";
 
 const styleButton = {
   color: "white",
