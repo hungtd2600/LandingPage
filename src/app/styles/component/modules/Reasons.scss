@@ -20,3 +20,32 @@
     }
   }
 }
+
+.reason {
+  width: 292px;
+  height: 197px;
+  border: 1.4px solid #e0e3eb;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 20px 40px;
+  gap: 18px;
+  &-icon {
+    img {
+      width: 36.67px;
+    }
+  }
+  &-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23.5 / 20);
+    color: #3d445c;
+  }
+  &-desc {
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    color: #858ead;
+  }
+}

@@ -83,3 +83,12 @@
     }
   }
 }
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  .social-item {
+    cursor: pointer;
+  }
+}

@@ -1,7 +1,5 @@
 import { FC, ReactElement } from "react";
-import { listSProject } from "app/const/project";
-import Button from "../elements/Button";
-import ProjectBox from "../elements/ProjectBox";
+import Button from "app/components/elements/Button";
 import "app/styles/component/modules/Project.scss";
 
 const styleButton = {
@@ -10,9 +8,33 @@ const styleButton = {
   padding: "21px 108px",
   width: "295px",
   fontWeight: "400",
+  display: "flex",
 };
 
-const Project: FC = (): ReactElement => {
+type ProjectBoxType = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  desc: string;
+};
+
+type ProjectBoxProps = {
+  listSProject: ProjectBoxType[];
+};
+
+const Project: FC<ProjectBoxProps> = ({ listSProject }): ReactElement => {
+  const ProjectBox: FC<ProjectBoxType> = (
+    props: ProjectBoxType
+  ): ReactElement => {
+    return (
+      <div key={props.id} className="project-item">
+        <img src={props.imageUrl} alt="" className="item-image" />
+        <h3 className="item-title">{props.title}</h3>
+        <span className="item-desc">{props.desc}</span>
+      </div>
+    );
+  };
+
   return (
     <section className="project">
       <div className="container">

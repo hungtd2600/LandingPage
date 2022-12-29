@@ -1,20 +1,16 @@
 import "app/styles/component/elements/Button.scss";
+import images from "public/images";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonType extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
-  hasIcon?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  title,
-  style,
-  hasIcon = false,
-  ...props
-}) => {
+const Button: React.FC<ButtonType> = ({ title, style }) => {
   return (
-    <button {...props} className="button" style={style}>
+    <button className="button" style={style}>
+      {title === "Back" && <img alt="" src={images.arrowBack} />}
       {title}
-      {hasIcon && <i>arrow</i>}
+      {title === "Next" && <img alt="" src={images.arrowNext} />}
     </button>
   );
 };

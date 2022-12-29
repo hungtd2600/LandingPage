@@ -3,8 +3,7 @@
 .ads {
   height: 300px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)),
-    url("../../../../public/images/ads.png");
-  // Chỗ này em dùng đường dẫn tuyệt đối thì bị lỗi
+    url("/public/images/ads.png");
   .container {
     display: flex;
     justify-content: space-between;

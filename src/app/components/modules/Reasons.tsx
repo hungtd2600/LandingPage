@@ -1,15 +1,35 @@
 import { FC, ReactElement } from "react";
-import { listReason } from "app/const/reasons";
-import ReasonBox from "app/components/elements/ReasonBox";
 import "app/styles/component/modules/Reasons.scss";
 
-const Reasons: FC = (): ReactElement => {
+type ReasonBoxType = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  desc: string;
+};
+
+type ReasonBoxProps = {
+  listReasons: ReasonBoxType[];
+};
+
+const Reasons: FC<ReasonBoxProps> = ({ listReasons }): ReactElement => {
+  const ReasonBox: FC<ReasonBoxType> = (props: ReasonBoxType): ReactElement => {
+    return (
+      <div key={props.id} className="reason">
+        <div className="reason-icon">
+          <img src={props.imageUrl} alt="" />
+        </div>
+        <h2 className="reason-title">{props.title}</h2>
+        <p className="reason-desc">{props.desc}</p>
+      </div>
+    );
+  };
   return (
     <section className="reasons">
       <div className="container">
         <h1 className="reasons-title">Our Reputation</h1>
         <div className="reasons-content">
-          {listReason.map((item) => {
+          {listReasons.map((item) => {
             return (
               <ReasonBox
                 key={item.id}

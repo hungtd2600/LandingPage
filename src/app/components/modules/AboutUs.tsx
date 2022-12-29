@@ -1,6 +1,13 @@
 import { FC, ReactElement } from "react";
 import images from "public/images";
+import Button from "app/components/elements/Button";
 import "app/styles/component/modules/AboutUs.scss";
+
+const sytleButton = {
+  width: "220px",
+  height: "53px",
+  color: "#2947A9",
+};
 
 const AboutUs: FC = (): ReactElement => {
   return (
@@ -19,7 +26,9 @@ const AboutUs: FC = (): ReactElement => {
             seeking quality, innovation and reliability when building in the
             U.S.
           </p>
-          <button className="infor-more">More on Our History</button>
+          <div className="infor-more">
+            <Button title="More on Our History" style={sytleButton} />
+          </div>
         </div>
       </div>
     </section>
