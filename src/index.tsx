@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import GlobalStyles from "app/styles/globalstyles";
-import Landing from "app/pages/Landing";
+import LandingPage from "app/pages/LandingPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GlobalStyles>
-      <Landing />
+      <LandingPage />
     </GlobalStyles>
   </React.StrictMode>
 );
