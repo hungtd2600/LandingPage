@@ -15,7 +15,7 @@ import Input from "app/components/elements/Input";
 import images from "public/images";
 import "app/styles/component/pages/landing.scss";
 
-const Landing: FC = (): ReactElement => {
+const LandingPage: FC = (): ReactElement => {
   return (
     <>
       <NavBar menuList={menuList} />
@@ -91,4 +91,4 @@ const Landing: FC = (): ReactElement => {
   );
 };
 
-export default Landing;
+export default LandingPage;
