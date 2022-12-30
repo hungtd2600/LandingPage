@@ -17,10 +17,10 @@ const Footer: FC = (): ReactElement => {
   };
   return (
     <>
-      <section className="bottom">
+      <section className="footer">
         <div className="container">
-          <div className="bottom-left">
-            <div className="bottom-contact">
+          <div className="footer-left">
+            <div className="footer-contact">
               <div className="contact-address">
                 <span className="item-title">Address:</span>
                 <span className="item-content">
@@ -36,30 +36,28 @@ const Footer: FC = (): ReactElement => {
                 <span className="item-content">hello@thebox.com</span>
               </div>
             </div>
-            <div className="bottom-logo">
+            <div className="footer-logo">
               <Logo />
             </div>
           </div>
-          <div className="bottom-right">
-            <div className="bottom-news">
+          <div className="footer-right">
+            <div className="footer-news">
               <h5 className="news-title">Newsletter:</h5>
               <div className="new-content">
                 <Input placeholder="Your email here" />
                 <Button className="button new-button">Subscribe</Button>
               </div>
             </div>
-            <div className="bottom-social">
+            <div className="footer-social">
               <h5 className="social-title">Social:</h5>
               <SocialGroup />
             </div>
           </div>
         </div>
-      </section>
-      <section className="footer">
-        <div className="container">
-          <p className="footer-content">
-            TheBox Company © 2022. All Rights Reserved
-          </p>
+        <div className="footer-content">
+          <div className="container">
+            <p>TheBox Company © 2022. All Rights Reserved</p>
+          </div>
         </div>
       </section>
     </>

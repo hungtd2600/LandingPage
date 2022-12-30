@@ -8,57 +8,6 @@
   color: $primary-color !important;
 }
 
-.aboutus {
-  .container {
-    position: relative;
-    .aboutus-image {
-      max-width: 902px;
-      height: 699px;
-      box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
-        0px 8px 8px -4px rgba(17, 24, 39, 0.04);
-      border-radius: 2px;
-      margin-top: 74px;
-      margin-bottom: 202px;
-    }
-    .aboutus-infor {
-      height: 523px;
-      width: 488px;
-      border-radius: 2px;
-      background-color: $primary-color;
-      box-shadow: 0px 8px 8px -4px #1118270a;
-      padding: 50px 60px 60px 40px;
-      position: absolute;
-      right: 0;
-      top: 73px;
-      .infor-title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: calc(42 / 36);
-        color: $white-color;
-        margin-bottom: 37px;
-      }
-      .infor-desc {
-        font-size: 20px;
-        line-height: calc(23 / 20);
-        color: $white-color;
-        margin-bottom: 23px;
-      }
-      .infor-more {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 74px;
-        .aboutus-button {
-          width: 200px;
-          height: 53px;
-          color: $primary-color;
-        }
-      }
-    }
-  }
-}
-
 .services {
   .container {
     background-color: #f6f8f7;

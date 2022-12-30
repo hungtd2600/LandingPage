@@ -60,6 +60,7 @@
         flex-direction: column;
         gap: 12px;
         overflow: hidden;
+        cursor: pointer;
         .item-name {
           font-weight: 700;
           font-size: 20px;
@@ -100,72 +101,6 @@
           font-weight: 400;
           display: flex;
         }
-      }
-    }
-  }
-}
-.cta {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .cta-heading {
-      margin-top: 60px;
-      max-width: 539px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      justify-content: center;
-      .heading-title {
-        color: $title-color;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: calc(42 / 36);
-        text-align: center;
-      }
-      .heading-desc {
-        color: #292e3d;
-        font-size: 20px;
-        line-height: calc(23 / 20);
-        text-align: center;
-      }
-    }
-    .cta-content {
-      .content-form {
-        display: grid;
-        grid-template-columns: 280px 280px;
-        margin-top: 38px;
-        row-gap: 20px;
-        column-gap: 32px;
-        .content-textarea {
-          padding: 10px 8px;
-          gap: 10px;
-          background: $white-color;
-          border: 1px solid #e0e3eb;
-          border-radius: 4px;
-          width: 592px;
-          height: 135px;
-        }
-      }
-      .content-tutorial {
-        font-size: 16px;
-        line-height: calc(19 / 16);
-        color: #667299;
-        margin-top: 8px;
-        strong {
-          color: #c40303;
-        }
-      }
-    }
-    .cta-final {
-      margin-top: 28px;
-      margin-bottom: 61px;
-      .cta-button {
-        width: 271px;
-        background: $primary-color;
-        color: $white-color;
-        padding: 16px auto;
-        height: 53px;
       }
     }
   }

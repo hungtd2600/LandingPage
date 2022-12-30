@@ -106,44 +106,6 @@
   }
 }
 
-.ads {
-  height: 300px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)),
-    url("/public/images/ads.png");
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    gap: 182px;
-    padding-right: 48px;
-    .ads-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 30px;
-      .content-heading {
-        color: $white-color;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: calc(42 / 36);
-      }
-      .content-desc {
-        color: $white-color;
-        font-size: 24px;
-        line-height: calc(28 / 24);
-      }
-    }
-    .ads-button {
-      color: $white-color;
-      padding: 16px 20px;
-      background: unset;
-      border: 2px solid $white-color;
-      border-radius: 2px;
-    }
-  }
-}
-
 .box-number {
   font-weight: 600;
   font-size: 72px;
