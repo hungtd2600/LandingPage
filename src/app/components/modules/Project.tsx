@@ -20,7 +20,7 @@ const Project: FC<ProjectProps> = ({ projectList }): ReactElement => {
     return (
       <div key={props.id} className="project-item">
         <img src={props.imageUrl} alt="" className="item-image" />
-        <h3 className="item-title">{props.title}</h3>
+        <h3 className="item-name">{props.title}</h3>
         <span className="item-desc">{props.desc}</span>
       </div>
     );
@@ -28,7 +28,7 @@ const Project: FC<ProjectProps> = ({ projectList }): ReactElement => {
 
   return (
     <>
-      <section className="project">
+      <section id="project" className="project">
         <div className="container">
           <h2 className="project-title">Projects</h2>
           <div className="project-content">
@@ -90,7 +90,7 @@ const Project: FC<ProjectProps> = ({ projectList }): ReactElement => {
           </div>
         </div>
       </section>
-      <section className="cta">
+      <section id="contactus" className="cta">
         <div className="container">
           <div className="cta-heading">
             <h2 className="heading-title">What can us do for you?</h2>

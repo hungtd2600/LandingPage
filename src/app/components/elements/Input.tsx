@@ -1,4 +1,4 @@
-import "app/styles/component/elements/Input.scss";
+import "app/styles/component/elements/input.scss";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 

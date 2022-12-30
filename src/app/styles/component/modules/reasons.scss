@@ -1,4 +1,8 @@
-@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+@import "src/app/styles/globalstyles/globalStyles.scss";
+
+.hero {
+  margin-top: 80px;
+}
 
 .reasons {
   .container {
@@ -6,7 +10,7 @@
       font-weight: 700;
       font-size: 36px;
       line-height: calc(42 / 36);
-      color: $neutral-color;
+      color: $title-color;
       text-align: center;
       margin-top: 60px;
       margin-bottom: 50px;
@@ -32,6 +36,7 @@
   align-items: flex-start;
   padding: 20px 20px 40px;
   gap: 18px;
+  cursor: pointer;
   &-icon {
     img {
       width: 36.67px;

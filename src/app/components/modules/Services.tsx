@@ -44,7 +44,7 @@ const Services: FC<ServiceProps> = ({ serviceList }): ReactElement => {
 
   return (
     <>
-      <section className="aboutus">
+      <section id="aboutus" className="aboutus">
         <div className="container">
           <img className="aboutus-image" src={images.aboutUs} alt="" />
           <div className="aboutus-infor">
@@ -67,7 +67,7 @@ const Services: FC<ServiceProps> = ({ serviceList }): ReactElement => {
           </div>
         </div>
       </section>
-      <section className="services">
+      <section id="services" className="services">
         <div className="container">
           <h2 className="services-title">Services</h2>
           <div className="services-content">

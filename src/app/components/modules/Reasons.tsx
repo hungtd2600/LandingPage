@@ -27,7 +27,7 @@ const Reasons: FC<ReasonProps> = ({ reasonList }): ReactElement => {
   };
   return (
     <>
-      <section className="hero">
+      <section id="home" className="hero">
         <img src={images.hero} alt="" />
       </section>
       <section className="reasons">

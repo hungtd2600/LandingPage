@@ -3,7 +3,6 @@ import Input from "app/components/elements/Input";
 import Logo from "app/components/elements/Logo";
 import Button from "app/components/elements/Button";
 import images from "public/images";
-
 import "app/styles/component/modules/footer.scss";
 
 const Footer: FC = (): ReactElement => {

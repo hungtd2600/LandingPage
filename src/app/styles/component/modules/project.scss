@@ -1,4 +1,4 @@
-@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+@import "src/app/styles/globalstyles/globalStyles.scss";
 
 .active-link {
   font-weight: 700 !important;
@@ -15,7 +15,7 @@
       font-weight: 700;
       font-size: 36px;
       line-height: calc(42 / 36);
-      color: $neutral-color;
+      color: $title-color;
       margin: 88px auto 40px 0;
     }
     .project-content {
@@ -60,7 +60,7 @@
         flex-direction: column;
         gap: 12px;
         overflow: hidden;
-        .item-title {
+        .item-name {
           font-weight: 700;
           font-size: 20px;
           line-height: 23px;
@@ -115,14 +115,14 @@
       gap: 20px;
       justify-content: center;
       .heading-title {
-        color: $neutral-color;
+        color: $title-color;
         font-weight: 700;
         font-size: 36px;
         line-height: calc(42 / 36);
         text-align: center;
       }
       .heading-desc {
-        color: $neutral-color;
+        color: #292e3d;
         font-size: 20px;
         line-height: calc(23 / 20);
         text-align: center;
