@@ -1,20 +1,22 @@
 import { FC, ReactElement } from "react";
-import images from "public/images";
+
+import images from "assets/images";
 import Button from "app/components/elements/Button";
+
 import "app/styles/component/modules/stats.scss";
 
-type StatsType = {
+type TStats = {
   id: number;
   boxNumber: number;
   desc: string;
 };
 
 type StatsProps = {
-  statList: StatsType[];
+  statList: TStats[];
 };
 
 const Stats: FC<StatsProps> = ({ statList }): ReactElement => {
-  const StatsBox = (props: StatsType): ReactElement => {
+  const StatsBox = (props: TStats): ReactElement => {
     return (
       <>
         <h4 className="box-number">{props.boxNumber}</h4>
@@ -40,11 +42,7 @@ const Stats: FC<StatsProps> = ({ statList }): ReactElement => {
             {statList.map((item) => {
               return (
                 <div key={item.id} className="box-item">
-                  <StatsBox
-                    id={item.id}
-                    boxNumber={item.boxNumber}
-                    desc={item.desc}
-                  />
+                  <StatsBox {...item} />
                 </div>
               );
             })}

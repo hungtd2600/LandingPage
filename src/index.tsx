@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
+
 import GlobalStyles from "app/styles/globalstyles";
-import LandingPage from "app/pages/LandingPage";
+import router from "app/router";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -9,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GlobalStyles>
-      <LandingPage />
+      <RouterProvider router={router} />;
     </GlobalStyles>
   </React.StrictMode>
 );

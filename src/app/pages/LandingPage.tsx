@@ -1,9 +1,7 @@
+import * as yup from "yup";
 import { FC, ReactElement } from "react";
-import { projectList } from "app/const/project";
-import { reasonList } from "app/const/reasons";
-import { serviceList } from "app/const/services";
-import { statList } from "app/const/stats";
-import { menuList } from "app/const/menu";
+import { yupResolver } from "@hookform/resolvers/yup";
+
 import Footer from "app/components/modules/Footer";
 import NavBar from "app/components/modules/NavBar";
 import Reasons from "app/components/modules/Reasons";
@@ -11,14 +9,53 @@ import Services from "app/components/modules/Services";
 import Stats from "app/components/modules/Stats";
 import Project from "app/components/modules/Project";
 import Button from "app/components/elements/Button";
-import Input from "app/components/elements/Input";
-import images from "public/images";
-import "app/styles/component/pages/landing.scss";
+
+import { projectList } from "app/const/project";
+import { reasonList } from "app/const/reasons";
+import { serviceList } from "app/const/services";
+import { statList } from "app/const/stats";
+import { menuNavbarList, menuProjectList } from "app/const/menu";
+import images from "assets/images";
+import "app/styles/pages/landing.scss";
+
+import { useForm, SubmitHandler } from "react-hook-form";
+
+const schema = yup.object({
+  yourName: yup.string().required(),
+  phone: yup
+    .string()
+    .required()
+    .matches(
+      // eslint-disable-next-line no-useless-escape
+      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+    ),
+  email: yup.string().email().required(),
+  contacting: yup.string().required(),
+});
+
+type FormValues = {
+  yourName: string;
+  email: string;
+  contacting: string;
+  phone: string;
+  message: string;
+};
 
 const LandingPage: FC = (): ReactElement => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormValues>({ resolver: yupResolver(schema) });
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    console.log(data);
+    reset();
+  };
+
   return (
     <>
-      <NavBar menuList={menuList} />
+      <NavBar menuNavbarList={menuNavbarList} />
       <section id="home" className="hero">
         <img src={images.hero} alt="" />
       </section>
@@ -54,12 +91,14 @@ const LandingPage: FC = (): ReactElement => {
             <h3 className="content-heading">
               Free consultation with exceptional quality
             </h3>
-            <p className="content-desc">Just one call away: +84 1102 2703</p>
+            <p className="content-desc">
+              Just one call away: <a href="tel: +84 1102 2703">+84 1102 2703</a>
+            </p>
           </div>
           <Button className="button ads-button">Get your consultation</Button>
         </div>
       </section>
-      <Project projectList={projectList} />
+      <Project projectList={projectList} menuProjectList={menuProjectList} />
       <section className="cta" id="contactus">
         <div className="container">
           <div className="cta-heading">
@@ -69,21 +108,49 @@ const LandingPage: FC = (): ReactElement => {
               commercial or residential.
             </p>
           </div>
-          <div className="cta-content">
-            <div className="content-form">
-              <Input type="text" placeholder="Your Name*" />
-              <Input type="text" placeholder="Email*" />
-              <Input type="text" placeholder="Reason for Contacting*" />
-              <Input type="text" placeholder="Phone" />
-              <textarea className="content-textarea" placeholder="Messages" />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="cta-content">
+              <div className="content-form">
+                <input
+                  className={`${errors.yourName ? "isValidate" : ""}`}
+                  {...register("yourName", { required: true })}
+                  type="text"
+                  placeholder="Your Name*"
+                />
+                <input
+                  className={`${errors.email ? "isValidate" : ""}`}
+                  {...register("email", { required: true })}
+                  type="email"
+                  placeholder="Email*"
+                />
+                <input
+                  className={`${errors.contacting ? "isValidate" : ""}`}
+                  {...register("contacting", { required: true })}
+                  type="text"
+                  placeholder="Reason for Contacting*"
+                />
+                <input
+                  className={`${errors.phone ? "isValidate" : ""}`}
+                  {...register("phone", { required: true })}
+                  type="text"
+                  placeholder="Phone*"
+                />
+                <textarea
+                  {...register("message")}
+                  className="content-textarea"
+                  placeholder="Messages"
+                />
+              </div>
+              <p className="content-tutorial">
+                <strong>*</strong> indicates a required field
+              </p>
             </div>
-            <p className="content-tutorial">
-              <strong>*</strong> indicates a required field
-            </p>
-          </div>
-          <div className="cta-final">
-            <Button className="button cta-button ">Submit</Button>
-          </div>
+            <div className="cta-final">
+              <Button type="submit" className="button cta-button ">
+                Submit
+              </Button>
+            </div>
+          </form>
         </div>
       </section>
       <Footer />

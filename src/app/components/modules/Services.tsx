@@ -1,7 +1,8 @@
 import { FC, ReactElement, useEffect, useRef } from "react";
+
 import "app/styles/component/modules/services.scss";
 
-type ServiceType = {
+type TService = {
   id: number;
   imageUrl: string;
   service: string;
@@ -9,11 +10,11 @@ type ServiceType = {
 };
 
 type ServiceProps = {
-  serviceList: ServiceType[];
+  serviceList: TService[];
 };
 
 const Services: FC<ServiceProps> = ({ serviceList }): ReactElement => {
-  const ServiceCard = (props: ServiceType): ReactElement => {
+  const ServiceCard = (props: TService): ReactElement => {
     const card = useRef<HTMLInputElement>(null);
     const cardService = useRef<HTMLInputElement>(null);
 
@@ -29,7 +30,7 @@ const Services: FC<ServiceProps> = ({ serviceList }): ReactElement => {
 
     return (
       <div className="card" ref={card}>
-        <div key={props.id} className="card-icon">
+        <div className="card-icon">
           <img src={props.imageUrl} alt="" />
         </div>
         <div className="card-bulkhead" />
@@ -46,13 +47,7 @@ const Services: FC<ServiceProps> = ({ serviceList }): ReactElement => {
         <h2 className="services-title">Services</h2>
         <div className="services-content">
           {serviceList.map((item) => (
-            <ServiceCard
-              id={item.id}
-              key={item.id}
-              imageUrl={item.imageUrl}
-              service={item.service}
-              theme={item.theme}
-            />
+            <ServiceCard key={item.id} {...item} />
           ))}
         </div>
       </div>

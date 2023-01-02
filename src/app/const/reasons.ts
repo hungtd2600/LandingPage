@@ -1,4 +1,4 @@
-import images from "public/images";
+import images from "assets/images";
 
 export const reasonList = [
   {

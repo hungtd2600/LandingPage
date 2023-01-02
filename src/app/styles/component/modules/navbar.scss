@@ -1,8 +1,10 @@
 @import "src/app/styles/globalstyles/globalStyles.scss";
 
 .active {
-  color: $secondary-color !important;
-  font-weight: 600 !important;
+  a {
+    color: $secondary-color !important;
+    font-weight: 600 !important;
+  }
 }
 .navbar {
   height: 80px;

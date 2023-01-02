@@ -1,5 +1,6 @@
 import { FC, ReactElement } from "react";
-import images from "public/images";
+
+import images from "assets/images";
 import "app/styles/component/elements/logo.scss";
 
 const Logo: FC = (): ReactElement => {

@@ -3,6 +3,11 @@
 .hero {
   margin-top: 80px;
 }
+
+.isValidate {
+  border: 1px solid red;
+}
+
 .aboutus {
   .container {
     position: relative;
@@ -57,7 +62,7 @@
 .ads {
   height: 300px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)),
-    url("/public/images/ads.png");
+    url("/assets/images/ads.png");
   .container {
     display: flex;
     justify-content: space-between;
@@ -80,6 +85,10 @@
         color: $white-color;
         font-size: 24px;
         line-height: calc(28 / 24);
+        a {
+          text-decoration: underline;
+          color: $white-color;
+        }
       }
     }
     .ads-button {
@@ -147,6 +156,7 @@
     .cta-final {
       margin-top: 28px;
       margin-bottom: 61px;
+      text-align: center;
       .cta-button {
         width: 271px;
         background: $primary-color;
