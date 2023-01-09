@@ -2,7 +2,7 @@
 $primary-color: #2947a9;
 $white-color: #ffffff;
 $secondary-color: #f9995d;
-$neutral-color: #292e3d;
+$title-color: #292e3d;
 
 .container {
   max-width: 1216px;
@@ -10,8 +10,19 @@ $neutral-color: #292e3d;
   padding: 0;
 }
 
+input {
+  padding: 10px 8px;
+  gap: 10px;
+  background: $white-color;
+  border: 1px solid #e0e3eb;
+  border-radius: 4px;
+  width: 280px;
+  height: 41px;
+}
+
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;

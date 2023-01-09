@@ -1,4 +1,4 @@
-@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+@import "src/app/styles/globalstyles/globalStyles.scss";
 
 .stats {
   height: 723px;
@@ -69,7 +69,7 @@
           align-items: flex-start;
           padding: 30px;
           gap: 2px;
-          border: 1px solid #ffffff;
+          border: 1px solid $white-color;
           box-shadow: 0px 12px 16px -4px rgba(17, 24, 39, 0.1),
             0px 4px 6px -2px rgba(17, 24, 39, 0.05);
           border-radius: 4px;
@@ -96,6 +96,12 @@
         width: 330px;
         margin-bottom: 49px;
       }
+      .introduce-button {
+        width: 176px;
+        background: $primary-color;
+        color: $white-color;
+        padding: 16px 39px;
+      }
     }
   }
 }
@@ -104,7 +110,7 @@
   font-weight: 600;
   font-size: 72px;
   line-height: calc(84 / 72);
-  color: $neutral-color;
+  color: #292e3d;
 }
 .box-desc {
   display: flex;

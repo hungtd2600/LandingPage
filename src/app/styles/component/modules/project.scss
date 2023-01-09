@@ -1,4 +1,4 @@
-@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+@import "src/app/styles/globalstyles/globalStyles.scss";
 
 .active-link {
   font-weight: 700 !important;
@@ -15,7 +15,7 @@
       font-weight: 700;
       font-size: 36px;
       line-height: calc(42 / 36);
-      color: $neutral-color;
+      color: $title-color;
       margin: 88px auto 40px 0;
     }
     .project-content {
@@ -60,7 +60,8 @@
         flex-direction: column;
         gap: 12px;
         overflow: hidden;
-        .item-title {
+        cursor: pointer;
+        .item-name {
           font-weight: 700;
           font-size: 20px;
           line-height: 23px;
@@ -86,9 +87,16 @@
           .control-item {
             width: 16px;
             height: 16px;
-            border-radius: 50%;
             cursor: pointer;
           }
+        }
+        .navigate-button {
+          color: $white-color;
+          background: #292e3d;
+          padding: 21px 108px;
+          width: 295px;
+          font-weight: 400;
+          display: flex;
         }
       }
     }

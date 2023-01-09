@@ -1,65 +1,48 @@
-import { FC, ReactElement, useEffect, useRef } from "react";
-import Logo from "app/components/elements/Logo";
-import "app/styles/component/modules/NavBar.scss";
+import { FC, ReactElement, useState } from "react";
 
-type MenuItemType = {
+import Logo from "app/components/elements/Logo";
+
+import "app/styles/component/modules/navbar.scss";
+
+type TMenuItem = {
   id: number;
   name: string;
-  isActive: boolean;
   link: string;
 };
 
 type MenuItemProps = {
-  menuList: MenuItemType[];
+  menuNavbarList: TMenuItem[];
 };
 
-const Menu: FC<MenuItemProps> = ({ menuList }): ReactElement => {
-  const MenuItem: FC<MenuItemType> = ({
-    name,
-    isActive,
-    id,
-    link,
-  }: MenuItemType): ReactElement => {
-    const menuItem = useRef<HTMLAnchorElement>(null);
+const NavBar: FC<MenuItemProps> = ({ menuNavbarList }): ReactElement => {
+  const [idActive, setIdActive] = useState(1);
 
-    useEffect(() => {
-      const menuItemElement = menuItem.current;
-      if (isActive === true) {
-        menuItemElement?.classList.add("active");
-      }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+  const Menu: FC<MenuItemProps> = ({ menuNavbarList }): ReactElement => {
     return (
-      <li key={id} className="menu-item">
-        <a ref={menuItem} href={link} className="menu-link">
-          {name}
-        </a>
-      </li>
+      <ul className="menu">
+        {menuNavbarList.map(({ name, link, id }) => {
+          return (
+            <li
+              key={id}
+              className={`menu-item ${id === idActive ? "active" : ""}`}
+              onClick={() => {
+                setIdActive(id);
+              }}
+            >
+              <a href={link} className="menu-link">
+                {name}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     );
   };
-  return (
-    <ul className="menu">
-      {menuList.map((item) => {
-        return (
-          <MenuItem
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            link={item.link}
-            isActive={item.isActive}
-          />
-        );
-      })}
-    </ul>
-  );
-};
-
-const NavBar: FC<MenuItemProps> = ({ menuList }): ReactElement => {
   return (
     <section className="navbar">
       <div className="container">
         <Logo />
-        <Menu menuList={menuList} />
+        <Menu menuNavbarList={menuNavbarList} />
       </div>
     </section>
   );

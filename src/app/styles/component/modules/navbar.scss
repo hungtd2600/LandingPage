@@ -1,11 +1,21 @@
-@import "src/app/styles/GlobalStyles/GlobalStyles.scss";
+@import "src/app/styles/globalstyles/globalStyles.scss";
 
 .active {
-  color: $secondary-color !important;
-  font-weight: 600 !important;
+  a {
+    color: $secondary-color !important;
+    font-weight: 600 !important;
+  }
 }
 .navbar {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  background-color: $white-color;
+  width: 100%;
   .container {
+    width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
